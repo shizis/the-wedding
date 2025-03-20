@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Ephesis&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-amiri: "Amiri", serif;
+    --font-ephesis: "Ephesis", cursive;
+    --font-lora: "Lora", serif;
+    --color-angga-laras-primary:#7f7f7f;
+    --color-angga-laras-bg:#fffeff;
+    --color-angga-laras-white:#fff;
+    --color-angga-laras-black:#000;
+    --color-angga-laras-amber: oklch(0.879 0.169 91.605);
+    --color-angga-laras-button-active: oklch(0.879 0.169 91.605);
+    --color-angga-laras-button-hover: oklch(0.828 0.189 84.429);
+}
