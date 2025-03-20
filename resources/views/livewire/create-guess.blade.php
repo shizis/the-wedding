@@ -22,9 +22,8 @@
                 @foreach ($guess as $gues)
                     <tr wire:key="{{ $gues->id }}">
                         <td class="p-4 border border-gray-400">{{ $gues->name }}</td>
-                        <td class="p-4 border border-gray-400">{{ $gues->slug }}</td>
                         <td class="p-4 border border-gray-400 text-center flex flex-row justify-center gap-4">
-                            <a href="{{ url("/angga-laras/{$gues->slug}") }}"
+                            <a id="linkId" href="{{ url("/angga-laras/{$gues->slug}") }}"
                                 class="bg-blue-500 text-sm text-white px-4 py-2 rounded-md hover:bg-blue-700 font-semibold">View</a>
                             <form wire:submit="destroy({{ $gues->id }})"
                                 wire:confirm="Anda yakin ingin menghapus Tamu ini?">
@@ -32,6 +31,9 @@
                                 <button type="submit"
                                     class="bg-red-500 text-sm text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold cursor-pointer">Delete</button>
                             </form>
+                            <button type="button" data-copy-button data-copy-target="linkId"
+                                class="bg-green-500 text-sm text-white px-4 py-2 rounded-md hover:bg-green-700 font-semibold cursor-pointer">Copy
+                                Link</button>
                         </td>
                     </tr>
                 @endforeach

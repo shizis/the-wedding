@@ -1000,9 +1000,6 @@
             </div>
             <div x-show="open" x-cloak
                 class="bg-linear-to-t/oklch to-[#6887B4]/50 from-sky-500/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 flex flex-col gap-2 relative z-10">
-                <!-- <div
-                    class="absolute inset-0 bg-[linear-gradient(45deg,#ffffff33_50%,transparent_50%)] bg-[size:25px_25px] -z-11">
-                </div> -->
                 <div class="justify-items-start">
                     <img src="{{ url('images/assets/Dana_logo.png') }}" alt="" class="w-25 lg:w-30">
                 </div>
