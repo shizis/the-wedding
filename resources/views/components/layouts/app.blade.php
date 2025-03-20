@@ -23,7 +23,7 @@
     <meta name="og:title" content="dr. Angga and dr. Laras" />
     <meta name="og:type" content="website" />
     <meta name="og:url" content="{{ url('/angga-laras') }}" />
-    <meta name="og:image" content="{{ url('./img/WA0002.jpg') }}" />
+    <meta name="og:image" content="{{ url('img/WA0002.jpg') }}" />
     <meta name="og:site_name" content="dr. angga and dr. laras" />
     <meta name="og:description" content="11 April 2025" />
     <!-- apple meta tags -->
