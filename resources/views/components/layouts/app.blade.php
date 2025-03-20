@@ -20,11 +20,11 @@
     <meta name="identifier-URL" content="{{ url('/angga-laras') }}" />
     <meta name="keywords" content="wedding website, angga laras," />
     <!-- open graph -->
-    <meta name="og:title" content="dr. Angga and dr. Laras" />
+    <meta name="og:title" content="dr. Angga &amp; dr. Laras" />
     <meta name="og:type" content="website" />
     <meta name="og:url" content="{{ url('/angga-laras') }}" />
     <meta name="og:image" content="{{ url('images/WA0002.jpg') }}" />
-    <meta name="og:site_name" content="dr. angga and dr. laras" />
+    <meta name="og:site_name" content="dr. angga &amp; dr. laras" />
     <meta name="og:description" content="11 April 2025" />
     <!-- apple meta tags -->
     <meta name="apple-mobile-web-app-title" content="Wedding Angga &amp; Laras" />
@@ -37,39 +37,7 @@
     <link href="http://github.com/images/touch-icon-ipad.png" sizes="72x72" rel="apple-touch-icon-precomposed" />
     <link href="http://github.com/images/apple-touch-icon-57x57.png" sizes="57x57"
         rel="apple-touch-icon-precomposed" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": [
-                        "Person",
-                        "Organization"
-                    ],
-                    "@id": "{{ url('/angga-laras') }}",
-                    "name": "{{ url('/') }}",
-                },
-                {
-                    "@type": "WebSite",
-                    "@id": "{{ url('/#website') }}",
-                    "url": "{{ url('/') }}",
-                    "inLanguage": "en-US"
-                },
-                {
-                    "@type": "WebPage",
-                    "@id": "{{ url('/angga-laras/#webpage') }}",
-                    "url": "{{ url('/angga-laras') }}",
-                    "name": "Angga &amp; Laras",
-                    "primaryImageOfPage": {
-                        "@id": "{{ url('/images/WA0002.jpg') }}"
-                    },
-                    "inLanguage": "en-US"
-                }
-            ]
-        }
-    </script>
 
     <style>
         [x-cloak] {
