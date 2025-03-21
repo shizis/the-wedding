@@ -882,7 +882,7 @@
                 </template>
             </div>
         </div>
-        <div class="grid w-md mt-6 mx-auto">
+        <div class="grid mt-6 mx-auto max-w-md">
             <video controls class="w-full rounded-md">
                 <source src="{{ url('video/VID-20250321-WA0014.mp4') }}" type="video/mp4">
             </video>
@@ -1058,74 +1058,74 @@
         const pauseIcon = document.getElementById('pauseIcon');
 
         // Kembali ke tampilan awal saat refresh dan hilangkan "#first" dari URL
-        window.onload = function() {
-            window.scrollTo(0, 0);
+        // window.onload = function() {
+        //     window.scrollTo(0, 0);
 
-            // // Menghilangkan "#first" dari URL jika ada
-            // if (window.location.hash === "#first") {
-            //     history.replaceState(null, document.title, window.location.pathname + window.location.search);
-            // }
-        };
-        // Pastikan scroll ke atas saat halaman dimuat
-        window.history.scrollRestoration = "manual";
+        //     // // Menghilangkan "#first" dari URL jika ada
+        //     // if (window.location.hash === "#first") {
+        //     //     history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        //     // }
+        // };
+        // // Pastikan scroll ke atas saat halaman dimuat
+        // window.history.scrollRestoration = "manual";
 
-        // Nonaktifkan scrolling saat halaman dimuat
-        body.style.overflow = 'hidden';
+        // // Nonaktifkan scrolling saat halaman dimuat
+        // body.style.overflow = 'hidden';
 
-        function preventScroll(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
+        // function preventScroll(e) {
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     return false;
+        // }
 
-        // Tambahkan event listener untuk mencegah scrolling
-        window.addEventListener('wheel', preventScroll, {
-            passive: false
-        });
-        window.addEventListener('touchmove', preventScroll, {
-            passive: false
-        });
+        // // Tambahkan event listener untuk mencegah scrolling
+        // window.addEventListener('wheel', preventScroll, {
+        //     passive: false
+        // });
+        // window.addEventListener('touchmove', preventScroll, {
+        //     passive: false
+        // });
 
-        // Putar musik dan aktifkan scrolling saat tombol "buka undangan" diklik
-        openInvitationBtn.addEventListener('click', function() {
+        // // Putar musik dan aktifkan scrolling saat tombol "buka undangan" diklik
+        // openInvitationBtn.addEventListener('click', function() {
 
-            // Putar musik
-            musicPlayer.play()
-                .then(() => {
-                    playIcon.classList.add('hidden');
-                    pauseIcon.classList.remove('hidden');
-                })
-                .catch(error => {
-                    console.log('Autoplay gagal:', error);
-                });
+        //     // Putar musik
+        //     musicPlayer.play()
+        //         .then(() => {
+        //             playIcon.classList.add('hidden');
+        //             pauseIcon.classList.remove('hidden');
+        //         })
+        //         .catch(error => {
+        //             console.log('Autoplay gagal:', error);
+        //         });
 
-            // Aktifkan scrolling
-            body.style.overflow = '';
-            window.removeEventListener('wheel', preventScroll);
-            window.removeEventListener('touchmove', preventScroll);
+        //     // Aktifkan scrolling
+        //     body.style.overflow = '';
+        //     window.removeEventListener('wheel', preventScroll);
+        //     window.removeEventListener('touchmove', preventScroll);
 
-            // Sembunyikan tombol buka undangan
-            openInvitationBtn.parentElement.classList.remove('inline-flex');
-            openInvitationBtn.parentElement.classList.add('hidden');
-        });
+        //     // Sembunyikan tombol buka undangan
+        //     openInvitationBtn.parentElement.classList.remove('inline-flex');
+        //     openInvitationBtn.parentElement.classList.add('hidden');
+        // });
 
-        // Toggle music play/pause dengan floating button
-        musicControl.addEventListener('click', function() {
-            if (musicPlayer.paused) {
-                musicPlayer.play()
-                    .then(() => {
-                        playIcon.classList.add('hidden');
-                        pauseIcon.classList.remove('hidden');
-                    })
-                    .catch(error => {
-                        console.log('Pemutaran gagal:', error);
-                    });
-            } else {
-                musicPlayer.pause();
-                playIcon.classList.remove('hidden');
-                pauseIcon.classList.add('hidden');
-            }
-        });
+        // // Toggle music play/pause dengan floating button
+        // musicControl.addEventListener('click', function() {
+        //     if (musicPlayer.paused) {
+        //         musicPlayer.play()
+        //             .then(() => {
+        //                 playIcon.classList.add('hidden');
+        //                 pauseIcon.classList.remove('hidden');
+        //             })
+        //             .catch(error => {
+        //                 console.log('Pemutaran gagal:', error);
+        //             });
+        //     } else {
+        //         musicPlayer.pause();
+        //         playIcon.classList.remove('hidden');
+        //         pauseIcon.classList.add('hidden');
+        //     }
+        // });
 
         // Create a global object for scroll direction that can be accessed by Alpine
         let lastScrollY;
