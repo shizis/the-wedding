@@ -48,7 +48,7 @@
                                 </button>
                             </form>
                             <a data-action="share/whatsapp/share"
-                                href="https://api.whatsapp.com/send?text=Assalamualaikum&lt;br&gt;{{ url("/angga-laras/{$gues->slug}") }}"
+                                href="https://api.whatsapp.com/send?text=Assalamualaikum Warahmatullahi Wabarakatuh%0a%0aTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i {{ $gues->name }} untuk menghadiri acara kami %0a%0a{{ url("/angga-laras/{$gues->slug}") }}%0a%0a"
                                 class="bg-green-500 px-4 py-2 text-sm rounded-md hover:bg-green-600 text-white font-semibold">
                                 <img src="{{ url('images/assets/WhatsApp_icon.png') }}" alt="whatsapp"
                                     class="size-6 object-fill object-center">
