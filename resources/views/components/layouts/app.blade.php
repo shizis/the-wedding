@@ -15,17 +15,17 @@
     <link rel="canonical" href="{{ url('/angga-laras') }}" />
     <title>{{ $title ?? 'Page Title' }}</title>
     <meta name="title" content="The Wedding of Angga &amp; Laras">
-    <meta name="description" content="11 April 2025" />
+    <meta name="description" content="Sabtu - Minggu, 12 - 13 April 2025" />
     <meta name="url" content="{{ url('/angga-laras') }}" />
     <meta name="identifier-URL" content="{{ url('/angga-laras') }}" />
     <meta name="keywords" content="wedding website, angga laras," />
     <!-- open graph -->
-    <meta name="og:title" content="dr. Angga &amp; dr. Laras" />
+    <meta name="og:title" content="The Wedding of Angga &amp; Laras" />
     <meta name="og:type" content="website" />
     <meta name="og:url" content="{{ url('/angga-laras') }}" />
     <meta name="og:image" content="{{ url('images/WA0002.jpg') }}" />
     <meta name="og:site_name" content="dr. angga &amp; dr. laras" />
-    <meta name="og:description" content="11 April 2025" />
+    <meta name="og:description" content="Sabtu - Minggu, 12 - 13 April 2025" />
     <!-- apple meta tags -->
     <meta name="apple-mobile-web-app-title" content="Wedding Angga &amp; Laras" />
     <!-- New in iOS6 -->
