@@ -22,7 +22,7 @@
     <header class="z-50 snap-none">
         <div class="relative h-svh w-full z-50" data-observe>
             <div class="h-full w-full" data-observe>
-                <img src="{{ url('images/WA0033.jpg') }}" alt=""
+                <img src="{{ url('images/WA0033-nowm.jpg') }}" alt=""
                     class="object-cover object-bottom w-full h-full transform transition duration-1000 -translate-y-50 opacity-0"
                     data-class-in="visible translate-y-0 opacity-100"
                     data-class-out="invisble -translate-y-50 opacity-0" />
