@@ -1,4 +1,9 @@
 <div class="max-w-screen-lg mx-auto p-4">
+    <p><strong>NOTE: </strong> Untuk Penulisan "DAN". gunakan tulisan <strong>"dan"</strong> jangan gunakan simbol
+        <strong>"&"</strong>.
+    </p>
+    <p><strong>Contoh Penulisan: </strong><strong>"angga dan laras"</strong> jangan <strong>"angga & laras"</strong>.
+    </p>
     <div class="mt-10 w-full">
         <form wire:submit="add" class="w-full">
             @csrf
