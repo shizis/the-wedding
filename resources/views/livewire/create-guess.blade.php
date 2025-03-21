@@ -31,8 +31,10 @@
                                 <button type="submit"
                                     class="bg-red-500 text-sm text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold cursor-pointer">Delete</button>
                             </form>
+                            <a href="https://api.whatsapp.com/send?text=kjashdkljahs"
+                                class="bg-green-600 px-4 py-2 text-sm rounded-md hover:bg-green-700 text-white font-semibold">WhatsApp</a>
                             <button type="button" data-copy-button data-copy-target="linkId"
-                                class="bg-green-500 text-sm text-white px-4 py-2 rounded-md hover:bg-green-700 font-semibold cursor-pointer">Copy
+                                class="bg-gray-500 text-sm text-white px-4 py-2 rounded-md hover:bg-gray-700 font-semibold cursor-pointer">Copy
                                 Link</button>
                         </td>
                     </tr>
