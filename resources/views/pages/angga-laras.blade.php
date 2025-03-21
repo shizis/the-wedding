@@ -882,6 +882,11 @@
                 </template>
             </div>
         </div>
+        <div class="grid w-md mt-6 mx-auto">
+            <video controls class="w-full rounded-md">
+                <source src="{{ url('video/VID-20250321-WA0014.mp4') }}" type="video/mp4">
+            </video>
+        </div>
     </div>
     <div class="relative w-full -z-10">
         <div class="absolute left-0 md:-top-60">
@@ -954,21 +959,21 @@
                 </button>
             </div>
             <div x-show="open" x-cloak
-                class="bg-linear-to-t/oklch to-[#00529C]/50 from-blue-500/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 flex flex-col gap-2 relative z-10">
+                class="bg-linear-to-t/oklch to-[#00529C]/50 from-blue-500/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 grid gap-2 relative z-10">
                 <!-- <div
                     class="absolute inset-0 bg-[linear-gradient(45deg,#ffffff33_50%,transparent_50%)] bg-[size:25px_25px] -z-11">
                 </div> -->
-                <div class="justify-items-end">
+                <div class="justify-self-end">
                     <img src="{{ url('images/assets/Logo_BRI.png') }}" alt="" class="w-25 lg:w-30">
                 </div>
-                <div class="justify-items-start">
+                <div class="justify-self-start">
                     <img src="{{ url('images/assets/chip-card') }}.png" alt="" class="w-20 lg:w-30">
                 </div>
                 <div class="ml-5">
                     <p class="font-bold" id="briNumber">5557&nbsp;0100&nbsp;9948&nbsp;534</p>
                     <p>a/n <span class="font-semibold">Angga Setiawan</span></p>
                 </div>
-                <div class="justify-items-end">
+                <div class="justify-self-end">
                     <div>
                         <button data-copy-button data-copy-target="briNumber"
                             class="cursor-pointer px-6 py-2 rounded-full bg-blue-500 text-angga-laras-white shadow-sm inset-shadow-xs hover:bg-blue-400">
@@ -978,18 +983,18 @@
                 </div>
             </div>
             <div x-show="open" x-cloak
-                class="bg-linear-to-t/oklch from-amber-400/50 to-[#f15a23]/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 flex flex-col gap-2 relative z-10">
-                <div class="justify-items-end">
+                class="bg-linear-to-t/oklch from-amber-400/50 to-[#f15a23]/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 grid gap-2 relative z-10">
+                <div class="justify-self-end">
                     <img src="{{ url('images/assets/BNI_logo.svg') }}" alt="" class="w-25 lg:w-30">
                 </div>
-                <div class="justify-items-start">
+                <div class="justify-self-start">
                     <img src="{{ url('images/assets/chip-card') }}.png" alt="" class="w-20 lg:w-30">
                 </div>
                 <div class="ml-5">
                     <p class="font-bold" id="bniNumber">1819152403</p>
                     <p>a/n <span class="font-semibold">Laras Kusumaningtyas</span></p>
                 </div>
-                <div class="justify-items-end">
+                <div class="justify-self-end">
                     <div>
                         <button data-copy-button data-copy-target="bniNumber"
                             class="cursor-pointer px-6 py-2 rounded-full bg-orange-600 text-angga-laras-white shadow-sm inset-shadow-xs hover:bg-orange-500">
@@ -999,15 +1004,15 @@
                 </div>
             </div>
             <div x-show="open" x-cloak
-                class="bg-linear-to-t/oklch to-[#6887B4]/50 from-sky-500/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 flex flex-col gap-2 relative z-10">
-                <div class="justify-items-start">
+                class="bg-linear-to-t/oklch to-[#6887B4]/50 from-sky-500/50 backdrop-blur-sm rounded-xl h-max max-w-md shadow-lg p-4 inset-shadow-sm mx-auto mt-4 grid gap-2 relative z-10">
+                <div class="justify-self-start">
                     <img src="{{ url('images/assets/Dana_logo.png') }}" alt="" class="w-25 lg:w-30">
                 </div>
                 <div class="ml-8 mt-4">
                     <p class="font-bold" id="danaNumber">0813&nbsp;7808&nbsp;1080</p>
                     <p>a/n <span class="font-semibold">Angga Setiawan</span></p>
                 </div>
-                <div class="justify-items-end">
+                <div class="justify-self-end">
                     <div>
                         <button data-copy-button data-copy-target="danaNumber"
                             class="cursor-pointer px-6 py-2 rounded-full bg-sky-600 text-angga-laras-white shadow-sm inset-shadow-xs hover:bg-sky-500">
