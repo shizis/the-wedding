@@ -882,11 +882,6 @@
                 </template>
             </div>
         </div>
-        <div class="grid mt-6 mx-auto max-w-md">
-            <video controls class="w-full rounded-md">
-                <source src="{{ url('video/VID-20250321-WA0014.mp4') }}" type="video/mp4">
-            </video>
-        </div>
     </div>
     <div class="relative w-full -z-10">
         <div class="absolute left-0 md:-top-60">
