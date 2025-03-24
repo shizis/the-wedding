@@ -1,22 +1,54 @@
 <div class="max-w-screen-lg mx-auto p-4">
-    <p><strong>NOTE: </strong> Untuk Penulisan "DAN". gunakan tulisan <strong>"dan"</strong> jangan gunakan simbol
-        <strong>"&"</strong>.
-    </p>
-    <p><strong>Contoh Penulisan: </strong><strong>"angga dan laras"</strong> jangan <strong>"angga & laras"</strong>.
-    </p>
-    <div class="mt-10 w-full">
-        <form wire:submit="add" class="w-full">
+    <div class="mb-8 shadow-sm border-gray-200 rounded-lg p-4 bg-amber-300/50">
+        <p><strong>NOTE : </strong> Untuk Penulisan "DAN". gunakan tulisan <strong>"dan"</strong> hindari penggunaan
+            simbol
+            <strong>"&"</strong>.
+        </p>
+        <p><strong>Contoh Penulisan : </strong><strong>"angga dan laras"</strong> hindari penulisan <strong>"angga &
+                laras"</strong>.
+        </p>
+    </div>
+    <div class="w-full">
+        @session('success')
+            <div class="p-4 bg-green-500/50 rounded-lg mb-2">
+                <p>{{ $value }}</p>
+            </div>
+        @endsession
+        <label for="guessInput">Tambah Tamu</label>
+        <form wire:submit="add" class="w-full flex gap-2">
             @csrf
-            <label for="guessInput" class="block">Tambah Tamu</label>
-            <input id="guessInput" name="guessInput" type="text" wire:model='name'
+            <input id="guessInput" name="guessInput" type="text" wire:model='name' placeholder="Add New Guess"
                 class="w-full mt-2 rounded-lg border border-gray-400 p-2 focus:outline-amber-400">
-            @error('name')
-                <em class="block text-red-600 text-sm mt-2 italic">{{ $message }}</em>
-            @enderror
             <button type="submit" id="guessAdd"
-                class="cursor-pointer bg-angga-laras-button-active px-6 py-2 mt-2 rounded-lg text-black border-angga-laras-amber border hover:bg-angga-laras-button-hover font-semibold">Tambah</button>
+                class="cursor-pointer bg-angga-laras-button-active px-6 py-2 mt-2 rounded-lg text-black border-angga-laras-amber border hover:bg-angga-laras-button-hover font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+            </button>
         </form>
-        <table id="guessTableBody" class="w-full border-collapse border border-gray-400 mt-6">
+        @error('name')
+            <em class="block text-red-600 text-sm mt-2 italic">{{ $message }}</em>
+        @enderror
+        <div class="mt-5">
+            <label for="searchGuess">Cari Tamu</label>
+        </div>
+        <form wire:submit="search" class="w-full gap-2 flex">
+            <input id="searchGuess" name="searchGuess" type="text" wire:model='query'
+                class="w-full mt-2 rounded-lg border border-gray-400 p-2 focus:outline-amber-400"
+                placeholder="Search Guess">
+            <button type="submit" id="guessAdd"
+                class="cursor-pointer bg-angga-laras-button-active px-6 py-2 mt-2 rounded-lg text-black border-angga-laras-amber border hover:bg-angga-laras-button-hover font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+
+            </button>
+        </form>
+        <p class="my-2">Jumlah Total Tamu : {{ $count }} Tamu</p>
+        <table id="guessTableBody" class="w-full border border-gray-400 border-collapse overflow-x-scroll touch-auto">
             <thead>
                 <tr>
                     <th class="p-4 border border-gray-400">Guess List Name</th>
@@ -25,12 +57,12 @@
             </thead>
             <tbody>
                 @foreach ($guess as $gues)
-                    <tr wire:key="{{ $gues->id }}">
+                    <tr wire:key="{{ $gues->id }}" class='border border-gray-400'>
                         <td class="p-4 border border-gray-400">{{ $gues->name }}
                         </td>
-                        <td class="p-4 border border-gray-400 text-center flex flex-row justify-center gap-2">
+                        <td class="p-4 text-center flex flex-row justify-center gap-2">
                             <a id="linkId" href="{{ url("/angga-laras/{$gues->slug}") }}" target="_blank"
-                                class="bg-blue-500 text-sm text-white px-4 py-2 rounded-md hover:bg-blue-700 font-semibold">
+                                class="bg-amber-300 text-sm text-black px-4 py-2 rounded-md hover:bg-amber-400 font-semibold">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -70,5 +102,8 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="mb-5">
+            {{ $guess->links('custom-paginate') }}
+        </div>
     </div>
 </div>

@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Illuminate\Support\Facades\Session;
 
 class GuessController extends Controller
 {
     public function index()
     {
-        return view('pages.guess');
+        if (Session::has('isLoggedIn')) {
+            $user = User::where('name', '=', 'anggalaras')->first();
+            return view('pages.guess', [
+                'name' => $user->name
+            ]);
+        }
+        return redirect('login');
     }
 }

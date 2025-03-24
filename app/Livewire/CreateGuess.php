@@ -6,13 +6,18 @@ use Livewire\Component;
 use App\Models\Guess;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Session;
+use Livewire\WithPagination;
 
 class CreateGuess extends Component
 {
+    use WithPagination;
+
     #[Session(key: 'name')]
     public $name;
     public $slug;
-    public $guess = [];
+    public $query = '';
+    public $count;
+    // public $guess = [];
 
     public function rules()
     {
@@ -36,7 +41,12 @@ class CreateGuess extends Component
 
     public function mount()
     {
-        $this->guess = Guess::all()->sortByDesc('id');
+        $this->count = Guess::select('name')->count();
+    }
+
+    public function search()
+    {
+        $this->resetPage();
     }
 
     public function add()
@@ -48,8 +58,8 @@ class CreateGuess extends Component
         ];
         // $same = Guess::where('name', '=', $newGuess['name'])->first();
         Guess::create($newGuess);
-        $this->reset();
-        $this->redirectIntended('/guess');
+        $this->reset('name');
+        return back()->with('success', 'Nama Tamu berhasil ditambahkan');
     }
 
     public function destroy($id)
@@ -60,6 +70,13 @@ class CreateGuess extends Component
 
     public function render()
     {
-        return view('livewire.create-guess');
+        return view('livewire.create-guess', [
+            'guess' => Guess::where('name', 'like', '%' . $this->query . '%')->paginate(15)
+        ]);
+    }
+
+    public function paginationView()
+    {
+        return 'custom-paginate';
     }
 }
