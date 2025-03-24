@@ -71,7 +71,7 @@ class CreateGuess extends Component
     public function render()
     {
         return view('livewire.create-guess', [
-            'guess' => Guess::where('name', 'like', '%' . $this->query . '%')->paginate(15)
+            'guess' => Guess::where('name', 'like', '%' . $this->query . '%')->orderByDesc('id')->paginate(15)
         ]);
     }
 
