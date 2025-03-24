@@ -1,4 +1,21 @@
-<x-layouts.app title="Guess List">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess List</title>
+    @livewireStyles
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<style>
+    [x-cloak] {
+        display: none !important;
+    }
+</style>
+
+<body class="font-lora touch-pan-y bg-angga-laras-bg">
     <div class="w-full mx-auto">
         <div class="w-full mx-auto bg-white shadow-sm">
             <div class="max-w-screen-lg mx-auto p-4">
@@ -43,4 +60,7 @@
             })
         })
     </script>
-</x-layouts.app>
+    @livewireScriptConfig
+</body>
+
+</html>
