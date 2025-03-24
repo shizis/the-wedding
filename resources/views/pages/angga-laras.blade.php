@@ -54,7 +54,7 @@
                         <div class="w-50">
                             <p class="text-angga-laras-white text-sm">Kepada Bapak/Ibu/Saudara/i</p>
                             <div class="border border-white p-4 mt-4 rounded-lg w-full">
-                                <p class="text-angga-laras-white font-bold text-base" id="guessName">{{ $name }}
+                                <p class="text-angga-laras-white font-bold text-sm" id="guessName">{{ $name }}
                                 </p>
                             </div>
                         </div>
